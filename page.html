@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .background{
+            background-image: url("/backgroundimg.jpeg");
+            background-size: cover;
+            background-position: center;
+        }
+        /* Features */
+.features{
+    margin-top:25px;
+    display:flex;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    height: 150px; 
+    width: 100px;
+    margin-left:25px ;
+}
+
+.feature-box{
+    backdrop-filter:blur(5px);
+    color:white;
+    padding:20px;
+    border-radius:20px;
+    text-align:center;
+    font-weight:bold;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    
+}
+
+    </style>
+</head>
+<body >
+    
+  <div style="height: 740px;width: 500px;margin: 0 auto;margin-top: 100px;" class="background">
+        
+        <div style="display: flex; align-items: center;justify-content: center; gap: 10px;">
+            <image src="/hi.jpeg" height="50px" width="50px" style="border-radius: 50%;"></image>
+            <h2 style="color: white;">EDUPROVA</h2>
+        
+        </div>
+        <h2 style="color: white;padding-left:150px ;">Empower Your Learning <br><span style="padding-left: 30px;">with Eduprova</span></h2>
+        <h5 style="color: white;padding-left:150px ;">An innovative educational app designed for<br><span style="padding-left:50px ;">student,learners, and more!</span></h5>
+        <img src="/phone img.png" height="300px" width="180px" style="padding-left: 160px; border-radius:40px">
+         <!-- Bottom Boxes -->
+    <div class="features">
+        <div class="feature-box"><image src = "/one.jpeg" height="60px" width="58px" style="border-radius: 20px;"><br><br>Interactive Courses</div>
+        <div class="feature-box"><image src = "/two.jpeg" height="60px" width="58px" style="border-radius: 20px;"><br><br>Pracice Tests</span></div>
+        <div class="feature-box"><image src = "/three.jpeg" height="60px" width="58px" style="border-radius:20px ;"><br><br>Live Sessions</div>
+        <div class="feature-box"><image src = "/four.jpeg" height="60px" width="58px" style="border-radius:20px"><br><br>Progress Tracking</div>
+    </div>
+    </div>
+</body>
+</html>   

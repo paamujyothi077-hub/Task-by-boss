@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    min-height: 100%;
+    font-family: "Poppins", "Inter", sans-serif;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.12), transparent 20%),
+                radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.08), transparent 18%),
+                linear-gradient(180deg, #5d5bff 0%, #8f66f0 40%, #ff6fcf 100%);
+    color: #ffffff;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.page-wrapper {
+    position: relative;
+    width: min(1200px, 100%);
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+}
+
+.page-background {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.18), transparent 20%),
+                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.12), transparent 16%),
+                radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.08), transparent 22%);
+    pointer-events: none;
+}
+
+.hero-header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 999px;
+    padding: 14px 24px;
+    backdrop-filter: blur(12px);
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.brand-icon {
+    width: 54px;
+    height: 54px;
+    background: #ffffff;
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+}
+
+.brand-icon img {
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.hero {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(360px, 1fr) minmax(360px, 1fr);
+    gap: 48px;
+    align-items: center;
+    padding: 60px 36px;
+    border-radius: 48px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 40px 120px rgba(16, 10, 71, 0.28);
+    backdrop-filter: blur(24px);
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    top: -120px;
+    right: -100px;
+    filter: blur(20px);
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    bottom: -140px;
+    left: -120px;
+    filter: blur(18px);
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 1;
+    max-width: 620px;
+}
+
+.hero-copy h1 {
+    margin: 0;
+    font-size: clamp(3.5rem, 5vw, 5.2rem);
+    line-height: 0.96;
+    letter-spacing: -0.05em;
+    text-transform: capitalize;
+}
+
+.hero-copy h1 span {
+    display: block;
+    margin-top: 12px;
+    color: #ffffff;
+}
+
+.hero-copy p {
+    margin: 26px 0 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 520px;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 520px;
+}
+
+.visual-frame {
+    position: relative;
+    width: min(100%, 380px);
+    padding: 28px;
+    border-radius: 44px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.05));
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 40px 90px rgba(13, 6, 61, 0.3);
+}
+
+.visual-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 32px;
+}
+
+.visual-decor {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    gap: 8px;
+    text-align: center;
+    width: 120px;
+    height: 120px;
+    padding: 16px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(8px);
+}
+
+.visual-decor .decor-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.24);
+}
+
+.visual-decor .decor-icon {
+    position: absolute;
+    font-size: 1.8rem;
+}
+
+.decor-top-left {
+    top: -12px;
+    left: -20px;
+}
+
+.decor-top-right {
+    top: 40px;
+    right: -30px;
+}
+
+.decor-bottom-left {
+    bottom: 20px;
+    left: -28px;
+}
+
+.decor-bottom-right {
+    bottom: -24px;
+    right: -12px;
+}
+
+.features {
+    position: relative;
+    z-index: 1;
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.feature-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 120px;
+    padding: 24px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(12px);
+}
+
+.feature-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+    display: grid;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.16);
+    font-size: 1.4rem;
+}
+
+.feature-card p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+@media (max-width: 960px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 40px 28px;
+    }
+
+    .hero-visual {
+        min-height: 420px;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .page-wrapper {
+        padding: 24px 16px 60px;
+    }
+
+    .hero {
+        padding: 30px 24px;
+        gap: 28px;
+    }
+
+    .hero-copy h1 {
+        font-size: 2.6rem;
+    }
+
+    .visual-decor {
+        width: 96px;
+        height: 96px;
+    }
+
+    .decor-top-left {
+        top: -14px;
+        left: 0;
+    }
+
+    .decor-top-right {
+        top: 0;
+        right: -10px;
+    }
+
+    .decor-bottom-left {
+        bottom: -10px;
+        left: 0;
+    }
+
+    .decor-bottom-right {
+        bottom: -16px;
+        right: -8px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
